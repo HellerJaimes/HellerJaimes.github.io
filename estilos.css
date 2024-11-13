@@ -1,0 +1,90 @@
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Fondo claro */
+    color: #333; /* Texto oscuro */
+}
+
+.header-custom {
+    background-color: hsla(127, 76%, 41%, 0.886);
+    color: white; /* Cambia el color del texto si es necesario */
+}
+
+
+/* Estilo para el texto del encabezado */
+.header-custom h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Descripción del texto */
+.description {
+    text-align: justify;
+    padding: 0 15px;
+    line-height: 1.6;
+}
+
+/* Botón personalizado */
+.button-custom {
+    background-color: #007bff; /* Azul fuerte */
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button-custom:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+h2, h3 {
+    background-color: hsla(127, 76%, 41%, 0.886);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+h2 {
+    text-align: center;
+}
+.question {
+    margin: 15px 0;
+}
+.question p {
+    font-weight: bold;
+}
+.resultado {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}

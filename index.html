@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<!-- Lenguaje -->
+<html lang="es">
+<!-- Cabecera de la página -->
+<head>
+    <!-- Impirmir caracteres especiales como la ñ -->   
+    <meta charset="UTF-8">
+    <!-- Adaptación a las resoluciones de pantalla -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Declaracion de estilos -->
+    <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.3.0.css">
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Declaracion de scrips jquery y adicionales -->
+    <script type="text/javascript" charset="utf-8" src="jquery/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="jquery/jquery.mobile-1.3.0.js"></script>
+    <script src="script.js" defer></script>
+    
+</head>
+
+<body> 
+<!-- Versión 1.0 ORGANIZACION DE COMPUTADORES APP -->
+<!-- Por: Jeison M. Delgado G. -->
+<!-- Start of first page -->
+<!-- Inicio de la página -->
+<div data-role="page" id="inicio">
+    <!-- Encabezado -->
+    <div data-role="header" class="header-custom">
+        <h1>UNIVERSIDAD DE SANTANDER</h1>
+    </div>
+    <!-- Contenido -->
+    <div data-role="content" class="content-custom">
+        <center>
+            <img src="img/img1.gif" class="image-custom" alt="Logo de la materia">
+            <h2>Organización de Computadores</h2>  
+        </center> 
+        <p class="description">
+            Sistema de apoyo interactivo para la materia de Organización de Computadores. 
+            A través de este menú de opciones, podrán explorar y profundizar en los diferentes conceptos que se han abordado en clase. 
+            El objetivo es proporcionar un entorno donde puedan elegir qué temas revisar y reforzar según sus necesidades académicas.
+        </p>
+        <center>
+            <a href="#menu" data-role="button" data-icon="check" data-iconpos="right" data-theme="b" data-inline="true" class="button-custom"> INICIAR </a>
+        </center>
+    </div>
+</div>
+<!-- End of first page -->
+
+<!-- Start of second page -->
+<div data-role="page" id="menu">
+    <div data-role="header" data-theme="d">
+        <h1>Menú</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /header -->
+    <div data-role="content" data-theme="b">   
+        <ul data-role="listview" data-inset="true" data-filter="true">
+            <li><a href="#pag1">Estructura y Funcionamiento de la Máquina Abacus</a></li>
+            <li><a href="#pag2">Características de la Máquina Super Abacus</a></li>
+            <li><a href="#pag3">Arquitectura de Von Neumann</a></li>
+            <li><a href="#pag4">Memoria Principal y Memoria Secundaria</a></li>
+            <li><a href="#pag5">Unidades de Almacenamiento</a></li>
+            <li><a href="#pag6">Ciclo de Instrucción del Procesador</a></li>
+            <li><a href="#pag7">Evaluación y Pruebas</a></li>  
+            <li><a href="#pag8">Tendencias Futuras en la Organización de Computadores</a></li>  
+        </ul>
+    </div><!-- /content -->
+</div><!-- /page -->
+<!-- End of second page -->
+
+<div data-role="page" id="pag1">
+    <div data-role="header" data-theme="d">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="d">
+        <center>
+            <img src="img/abacus1.png" style="border-radius: 5px; width: 360px;">
+            <h2>Estructura y Funcionamiento de la Máquina Abacus</h2>  
+        </center> 
+        <div class="content-section">
+        
+            <p>
+                La <strong>Máquina Abacus</strong> es un modelo simplificado de una computadora primitiva que destaca por su arquitectura simple y su funcionamiento basado en un único acumulador. Este dispositivo teórico es esencial para entender los principios fundamentales del procesamiento computacional y el manejo de datos.
+            </p>
+        
+            <h3>Principios Fundamentales</h3>
+            <ul>
+                <li>
+                    <strong>Acumulador como Componente Central:</strong> El acumulador es el corazón de la Máquina Abacus y actúa como la única unidad de almacenamiento temporal para las operaciones aritméticas y lógicas. Todas las instrucciones de la máquina se ejecutan con referencia al acumulador.
+                </li>
+                <li>
+                    <strong>Operaciones contra el Acumulador:</strong> Las instrucciones de la máquina están diseñadas para operar directamente sobre el acumulador. Estas operaciones incluyen:
+                    <ul>
+                        <li><strong>Suma (ADD):</strong> Agrega un valor al contenido actual del acumulador.</li>
+                        <li><strong>Resta (SUB):</strong> Resta un valor del contenido del acumulador.</li>
+                        <li><strong>Carga (LOAD):</strong> Carga un valor desde la memoria al acumulador.</li>
+                        <li><strong>Almacena (STORE):</strong> Guarda el contenido del acumulador en una ubicación de la memoria.</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h3>Estructura de la Máquina</h3>
+            <p>
+                La Máquina Abacus sigue un diseño de una sola dirección, lo que significa que las instrucciones hacen referencia a una dirección de memoria específica para ejecutar operaciones. Esto simplifica el funcionamiento pero también limita la capacidad de procesamiento complejo.
+            </p>
+            <ul>
+                <li><strong>Unidad de Control:</strong> Encargada de interpretar y ejecutar las instrucciones de la máquina en un ciclo predefinido.</li>
+                <li><strong>Memoria:</strong> Un espacio de almacenamiento que contiene datos y las instrucciones que la máquina ejecuta.</li>
+                <li><strong>Acumulador:</strong> La única unidad de almacenamiento temporal, donde se realizan todas las operaciones antes de transferir los resultados de vuelta a la memoria.</li>
+            </ul>
+        
+            <p>
+                <em>En este módulo</em> tendrás la oportunidad de explorar:
+                <ul>
+                    <li>Cómo se realizan las operaciones aritméticas básicas usando el acumulador.</li>
+                    <li>El concepto de operaciones contra el acumulador y cómo influyen en la eficiencia del procesamiento.</li>
+                    <li>Ejercicios prácticos que refuerzan el entendimiento de la arquitectura y funcionamiento de la Máquina Abacus.</li>
+                </ul>
+            </p>
+            <p>
+                Esta base te proporcionará una comprensión sólida de cómo funcionan las máquinas de computación más simples, lo que es esencial para avanzar hacia conceptos más complejos de organización y arquitectura de computadoras. ¡Prepárate para descubrir y experimentar con la Máquina Abacus de manera interactiva!
+            </p>
+        </div>
+            </div>
+</div>
+
+<div data-role="page" id="pag2">
+    <div data-role="header" data-theme="d">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="d">  
+        <center>
+            <img src="img/abacus.png" style="border-radius: 5px; width: 360px;">
+            <h2>Características de la Máquina Super Abacus</h2>  
+        </center> 
+        <div class="content-section">
+
+            <p>
+                La <strong>Super Abacus</strong> es una máquina de <strong>tercera generación</strong>, diseñada para mejorar el rendimiento y la eficiencia de las operaciones aritméticas y de direccionamiento en comparación con sus predecesoras, como la <strong>Máquina Abacus</strong>. Esta máquina incorpora avances significativos en términos de arquitectura y capacidades operativas.
+            </p>
+        
+            <h3>Registros Generales</h3>
+            <p>
+                Una de las principales mejoras de la <strong>Super Abacus</strong> es el uso de <strong>registros generales</strong>, que son capaces de realizar operaciones aritméticas y de direccionamiento de manera más rápida y flexible. Estos registros permiten almacenar datos de manera más eficiente y acceder a ellos con mayor rapidez, lo que reduce significativamente los tiempos de ejecución en comparación con las máquinas anteriores.
+            </p>
+        
+            <h3>Ciclo de Memoria</h3>
+            <p>
+                El <strong>ciclo de memoria</strong> en la <strong>Super Abacus</strong> se ha optimizado para mejorar la velocidad de lectura y escritura de datos. Gracias a su arquitectura avanzada, el tiempo de acceso a la memoria es más rápido, lo que permite un procesamiento más eficiente de las instrucciones. Este ciclo es mucho más corto que en la <strong>Máquina Abacus</strong>, lo que resulta en un rendimiento general más alto.
+            </p>
+        
+            <h3>Diferencias con la Máquina Abacus</h3>
+            <p>
+                Aunque la <strong>Máquina Abacus</strong> era una máquina de segunda generación, tenía ciertas limitaciones en cuanto a la flexibilidad y velocidad de procesamiento. Los registros eran más especializados y no podían ser reutilizados para otras operaciones sin una reconfiguración manual. En cambio, la <strong>Super Abacus</strong> permite realizar múltiples tareas simultáneamente gracias a sus <strong>registros generales</strong> y su <strong>ciclo de memoria</strong> optimizado.
+            </p>
+        
+            <h3>Otras Características</h3>
+            <ul>
+                <li><strong>Mayor capacidad de procesamiento paralelo:</strong> A diferencia de la <strong>Máquina Abacus</strong>, que procesaba una tarea a la vez, la <strong>Super Abacus</strong> tiene la capacidad de manejar múltiples procesos en paralelo, lo que mejora su rendimiento en aplicaciones complejas.</li>
+                <li><strong>Mejora en el direccionamiento:</strong> La <strong>Super Abacus</strong> cuenta con un sistema de direccionamiento más flexible, permitiendo acceder a diferentes partes de la memoria sin necesidad de configuraciones adicionales.</li>
+            </ul>
+        
+            <h3>Conclusión</h3>
+            <p>
+                La <strong>Super Abacus</strong> representa un avance significativo en la evolución de las máquinas computacionales, especialmente en comparación con la <strong>Máquina Abacus</strong>, proporcionando mejoras en el uso de registros, el ciclo de memoria y la capacidad de procesamiento general. Estas mejoras hacen que la <strong>Super Abacus</strong> sea más adecuada para tareas complejas y de mayor rendimiento, lo que la posiciona como un modelo ideal para aplicaciones de tercera generación.
+            </p>
+        </div>
+        
+            </div>
+</div>
+
+<div data-role="page" id="pag3">
+    <div data-role="header" data-theme="d">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="d">  
+        <center>
+            <img src="img/Arquitectura-Von-Neumann.png" style="border-radius: 5px; width: 360px;">
+            <h2>Arquitectura de Von Neumann</h2>  
+        </center> 
+        <div class="content-section">
+           
+            <p>
+                Esta opción profundiza en la <strong>Arquitectura de Von Neumann</strong>, su impacto en el diseño de computadores modernos, y cómo sus principios se aplican a las arquitecturas actuales. Los estudiantes podrán analizar el <strong>ciclo de instrucción</strong>, los <strong>registros</strong> y la estructura unificada de memoria.
+            </p>
+        
+            <h3>Impacto en el Diseño de Computadores Modernos</h3>
+            <p>
+                La <strong>Arquitectura de Von Neumann</strong> se ha convertido en el fundamento de la mayoría de los computadores modernos. Su estructura basada en una unidad de procesamiento central (CPU) que accede a una memoria unificada ha permitido el desarrollo de sistemas más eficientes y fáciles de programar. Esta arquitectura establece un modelo donde las instrucciones y los datos se almacenan en la misma memoria, lo que simplifica el diseño de la computadora.
+            </p>
+        
+            <h3>Ciclo de Instrucción</h3>
+            <p>
+                El <strong>ciclo de instrucción</strong> en la arquitectura de Von Neumann es el proceso mediante el cual la CPU obtiene, decodifica y ejecuta una instrucción. El ciclo consta de varias etapas clave:
+            </p>
+            <ul>
+                <li><strong>Fase de Obtención (Fetch):</strong> La instrucción se obtiene de la memoria principal.</li>
+                <li><strong>Fase de Decodificación (Decode):</strong> La instrucción obtenida se decodifica para determinar qué acción debe tomar la CPU.</li>
+                <li><strong>Fase de Ejecución (Execute):</strong> La CPU ejecuta la operación indicada por la instrucción.</li>
+                <li><strong>Fase de Almacenamiento (Store):</strong> Los resultados de la ejecución se almacenan en la memoria.</li>
+            </ul>
+        
+            <h3>Registros en la Arquitectura de Von Neumann</h3>
+            <p>
+                Los <strong>registros</strong> son pequeñas unidades de almacenamiento dentro de la CPU que contienen datos temporales durante la ejecución de las instrucciones. En la arquitectura de Von Neumann, los registros se utilizan para almacenar las instrucciones, los datos y las direcciones de memoria durante el ciclo de instrucción.
+            </p>
+        
+            <h3>Estructura Unificada de Memoria</h3>
+            <p>
+                La principal característica de la <strong>estructura unificada de memoria</strong> es que tanto los datos como las instrucciones se almacenan en una misma memoria, eliminando la necesidad de múltiples unidades de almacenamiento. Este enfoque simplifica la estructura del sistema y facilita el acceso a la memoria, aunque también puede generar cuellos de botella debido a la competencia entre las instrucciones y los datos por el acceso a la misma memoria.
+            </p>
+        
+            <h3>Conclusión</h3>
+            <p>
+                La <strong>Arquitectura de Von Neumann</strong> sigue siendo un pilar fundamental en el diseño de computadoras modernas. Su estructura, que combina el almacenamiento de datos e instrucciones en una memoria unificada, y el ciclo de instrucción basado en registros, ha sido clave para el avance de la computación. Aunque hay arquitecturas alternativas como la <strong>arquitectura Harvard</strong>, los principios de Von Neumann siguen siendo esenciales para entender el funcionamiento de los computadores actuales.
+            </p>
+        </div>
+            </div>
+</div>
+
+<div data-role="page" id="pag4">
+    <div data-role="header" data-theme="d">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="d">  
+        <center>
+            <img src="img/memoria.png" style="border-radius: 5px; width: 360px;">
+            <h2>Memoria Principal y Memoria Secundaria</h2>  
+        </center> 
+        <div class="content-section">
+            
+            <p>
+                Este tema estudia las diferencias entre <strong>memoria principal</strong> y <strong>memoria secundaria</strong>. Aprenderás cómo se gestionan los datos, las características de cada tipo de memoria, y cómo influyen en el rendimiento del sistema.
+            </p>
+        
+            <h3>Memoria Principal</h3>
+            <p>
+                La <strong>memoria principal</strong> es la memoria volátil utilizada por el procesador para almacenar temporalmente los datos y las instrucciones que está ejecutando en un momento dado. Generalmente, esta memoria incluye la <strong>RAM (Memoria de Acceso Aleatorio)</strong>, que permite un acceso rápido y directo a los datos, lo que es crucial para el rendimiento del sistema.
+            </p>
+            <ul>
+                <li><strong>Volatilidad:</strong> La memoria principal es volátil, lo que significa que pierde su contenido cuando se apaga el sistema.</li>
+                <li><strong>Acceso rápido:</strong> La memoria RAM es mucho más rápida que la memoria secundaria, lo que permite un procesamiento eficiente de los datos mientras la computadora está en funcionamiento.</li>
+                <li><strong>Capacidad limitada:</strong> Aunque es rápida, la capacidad de la memoria principal es limitada, lo que significa que solo puede almacenar una cantidad limitada de datos.</li>
+            </ul>
+        
+            <h3>Memoria Secundaria</h3>
+            <p>
+                La <strong>memoria secundaria</strong> se utiliza para almacenar datos de forma permanente o semi-permanente. A diferencia de la memoria principal, la memoria secundaria no se borra cuando el sistema se apaga, y tiene una capacidad mucho mayor. Ejemplos comunes de memoria secundaria incluyen discos duros (HDD), unidades de estado sólido (SSD) y unidades ópticas.
+            </p>
+            <ul>
+                <li><strong>No volátil:</strong> La memoria secundaria es no volátil, lo que significa que mantiene su contenido incluso cuando el sistema está apagado.</li>
+                <li><strong>Acceso más lento:</strong> A pesar de tener una mayor capacidad de almacenamiento, la memoria secundaria es más lenta que la memoria principal debido a los métodos de acceso utilizados.</li>
+                <li><strong>Capacidad de almacenamiento mayor:</strong> La memoria secundaria tiene una capacidad mucho mayor que la memoria principal, lo que permite almacenar grandes cantidades de datos, programas y archivos del sistema.</li>
+            </ul>
+        
+            <h3>Diferencias Clave</h3>
+            <p>
+                A continuación, se detallan las principales diferencias entre la memoria principal y la memoria secundaria:
+            </p>
+            <ul>
+                <li><strong>Velocidad:</strong> La memoria principal (RAM) es mucho más rápida que la memoria secundaria (HDD, SSD).</li>
+                <li><strong>Volatilidad:</strong> La memoria principal es volátil, mientras que la memoria secundaria es no volátil.</li>
+                <li><strong>Capacidad:</strong> La memoria secundaria ofrece una capacidad mucho mayor para almacenar datos a largo plazo.</li>
+                <li><strong>Propósito:</strong> La memoria principal se utiliza para almacenar datos temporales durante el procesamiento, mientras que la memoria secundaria se utiliza para almacenar datos a largo plazo y el sistema operativo.</li>
+            </ul>
+        
+            <h3>Impacto en el Rendimiento del Sistema</h3>
+            <p>
+                La combinación de memoria principal y memoria secundaria tiene un impacto directo en el rendimiento de un sistema informático. La velocidad de acceso de la memoria principal es crucial para el procesamiento rápido de datos, mientras que la capacidad de almacenamiento de la memoria secundaria permite mantener grandes cantidades de datos a largo plazo.
+            </p>
+            <p>
+                Un sistema que utiliza una memoria secundaria más rápida, como una unidad de estado sólido (SSD), puede mejorar significativamente el tiempo de arranque y la velocidad de lectura/escritura en comparación con los discos duros tradicionales (HDD).
+            </p>
+        
+            <h3>Conclusión</h3>
+            <p>
+                Tanto la memoria principal como la memoria secundaria son componentes esenciales para el funcionamiento de los sistemas informáticos. La memoria principal se encarga de las tareas rápidas y temporales, mientras que la memoria secundaria asegura el almacenamiento de datos a largo plazo. Comprender las diferencias y cómo se gestionan ambos tipos de memoria es crucial para mejorar el rendimiento general del sistema y optimizar su eficiencia.
+            </p>
+        </div>
+            </div>
+</div>
+
+<div data-role="page" id="pag5">
+    <div data-role="header" data-theme="d">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="d">  
+        <center>
+            <img src="img/odpcs12345discos.jpg" style="border-radius: 5px; width: 360px;">
+            <h2>Unidades de Almacenamiento</h2>  
+        </center> 
+        <div class="content-section">
+     
+            <p>
+                Este tema revisa los diferentes tipos de <strong>unidades de almacenamiento</strong> disponibles, incluyendo <strong>discos duros</strong>, <strong>SSDs</strong> y otros medios. Aprenderás sobre las velocidades de acceso, el tiempo de latencia y su relevancia en el rendimiento global del sistema.
+            </p>
+        
+            <h3>Discos Duros (HDD)</h3>
+            <p>
+                Los <strong>discos duros (HDD)</strong> son dispositivos de almacenamiento magnético tradicionales que se utilizan para guardar grandes cantidades de datos. Son conocidos por su gran capacidad y costo relativamente bajo, pero su rendimiento es más lento en comparación con las unidades de estado sólido (SSD).
+            </p>
+            <ul>
+                <li><strong>Capacidad:</strong> Los discos duros tienen una capacidad de almacenamiento muy alta, que puede alcanzar varios terabytes.</li>
+                <li><strong>Velocidad de acceso:</strong> La velocidad de acceso a los datos es más lenta debido a la mecánica interna del dispositivo, que incluye un brazo de lectura/escritura que se mueve físicamente.</li>
+                <li><strong>Tiempo de latencia:</strong> El tiempo de latencia es relativamente alto debido al tiempo que tarda el brazo en posicionarse en la ubicación correcta del disco.</li>
+                <li><strong>Costo:</strong> Son más baratos en comparación con las SSDs, lo que los hace adecuados para almacenamiento masivo de datos.</li>
+            </ul>
+        
+            <h3>Unidades de Estado Sólido (SSD)</h3>
+            <p>
+                Las <strong>unidades de estado sólido (SSD)</strong> son una forma de almacenamiento que utiliza memoria flash para almacenar los datos, sin partes móviles. Las SSDs ofrecen un rendimiento significativamente mejor que los discos duros, tanto en velocidad de acceso como en tiempo de latencia.
+            </p>
+            <ul>
+                <li><strong>Capacidad:</strong> Aunque las SSDs suelen tener menos capacidad que los discos duros tradicionales, las capacidades están aumentando y pueden llegar a varios terabytes.</li>
+                <li><strong>Velocidad de acceso:</strong> Las SSDs ofrecen velocidades de acceso mucho más rápidas debido a la ausencia de partes móviles. Esto se traduce en tiempos de arranque más rápidos y una mayor velocidad de lectura/escritura de datos.</li>
+                <li><strong>Tiempo de latencia:</strong> El tiempo de latencia es extremadamente bajo, lo que mejora la eficiencia en tareas que requieren acceso rápido a los datos.</li>
+                <li><strong>Costo:</strong> Las SSDs son más caras que los discos duros, aunque el precio ha estado disminuyendo con el tiempo.</li>
+            </ul>
+        
+            <h3>Unidades Flash USB</h3>
+            <p>
+                Las <strong>unidades flash USB</strong> son dispositivos portátiles que utilizan memoria flash para almacenar datos. Son muy populares debido a su portabilidad, facilidad de uso y accesibilidad.
+            </p>
+            <ul>
+                <li><strong>Capacidad:</strong> Generalmente tienen una capacidad más baja en comparación con los discos duros y SSDs, aunque pueden ser suficientes para almacenamiento de datos personales o archivos pequeños.</li>
+                <li><strong>Velocidad de acceso:</strong> Las velocidades de acceso varían dependiendo de la calidad y tipo de la memoria flash, pero generalmente son más lentas que las SSDs.</li>
+                <li><strong>Portabilidad:</strong> Son extremadamente portátiles y fáciles de usar, lo que las hace ideales para transferir archivos entre diferentes dispositivos.</li>
+            </ul>
+        
+            <h3>Otros Medios de Almacenamiento</h3>
+            <p>
+                Existen otros medios de almacenamiento que, aunque menos comunes hoy en día, todavía se utilizan en algunas aplicaciones específicas. Entre ellos se incluyen los discos ópticos (CDs, DVDs) y los discos de cinta magnética.
+            </p>
+            <ul>
+                <li><strong>Discos ópticos (CDs/DVDs):</strong> Aunque han sido reemplazados en gran medida por medios más rápidos como los SSDs, aún se usan para almacenamiento de datos y distribución de contenido en algunos casos.</li>
+                <li><strong>Discos de cinta magnética:</strong> Utilizados principalmente para el almacenamiento de respaldo de grandes cantidades de datos en servidores y sistemas de archivo.</li>
+            </ul>
+        
+            <h3>Impacto en el Rendimiento del Sistema</h3>
+            <p>
+                La elección del tipo de unidad de almacenamiento tiene un gran impacto en el rendimiento general de un sistema. Las SSDs, debido a su mayor velocidad de acceso y menor tiempo de latencia, mejoran significativamente la velocidad de arranque, la carga de aplicaciones y la transferencia de archivos. Por otro lado, los discos duros, aunque más lentos, siguen siendo útiles para almacenar grandes volúmenes de datos a un costo más bajo.
+            </p>
+            <p>
+                La combinación de un disco duro de gran capacidad y una SSD para el sistema operativo y aplicaciones es una solución popular, ya que ofrece lo mejor de ambos mundos: almacenamiento masivo económico y alto rendimiento.
+            </p>
+        
+            <h3>Conclusión</h3>
+            <p>
+                Las unidades de almacenamiento son componentes esenciales en cualquier sistema informático. La elección entre un HDD, un SSD, o un medio portátil como una unidad flash USB depende de las necesidades específicas de almacenamiento, velocidad y costo. Comprender las características de cada tipo de unidad de almacenamiento te permitirá tomar decisiones informadas sobre cómo optimizar el rendimiento de tu sistema.
+            </p>
+        </div>
+            </div>
+</div>
+
+<div data-role="page" id="pag6">
+    <div data-role="header" data-theme="d">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="d">  
+        <center>
+            <img src="img/odpcs12345.gif" style="border-radius: 5px; width: 360px;">
+            <h2>Ciclo de Instrucción del Procesador</h2>  
+        </center> 
+        <div class="content-section">
+            
+            <p>
+                Este tema explora las <strong>etapas del ciclo de instrucción</strong> en el procesador, desde la <strong>búsqueda de instrucciones</strong> hasta la <strong>ejecución de operaciones</strong>. Se ofrece una descripción detallada de cómo el procesador coordina estas fases para realizar cálculos y llevar a cabo operaciones dentro de un sistema computacional.
+            </p>
+        
+            <h3>Etapas del Ciclo de Instrucción</h3>
+            <p>
+                El ciclo de instrucción del procesador se divide en varias etapas clave, las cuales se ejecutan en un ciclo continuo para procesar instrucciones. Las principales etapas son las siguientes:
+            </p>
+            <ul>
+                <li><strong>1. Búsqueda de Instrucción (Fetch):</strong> 
+                    En esta etapa, el procesador recupera la instrucción de la memoria. El contador de programa (PC) apunta a la dirección de la siguiente instrucción a ejecutar, y el procesador la lee desde la memoria principal.
+                </li>
+                <li><strong>2. Decodificación de Instrucción (Decode):</strong> 
+                    Una vez que la instrucción ha sido recuperada, el procesador la decodifica para entender qué operación debe realizar. Esta fase involucra la interpretación de los bits de la instrucción para determinar el tipo de operación y los operandos necesarios.
+                </li>
+                <li><strong>3. Ejecución (Execute):</strong> 
+                    En esta etapa, el procesador lleva a cabo la operación especificada por la instrucción, ya sea una operación aritmética, lógica, o de control. Si la instrucción requiere un acceso a los registros o la memoria, este es el momento en que se lleva a cabo.
+                </li>
+                <li><strong>4. Acceso a Memoria (Memory Access):</strong> 
+                    Si la instrucción implica leer o escribir en la memoria (por ejemplo, operaciones de carga o almacenamiento), esta etapa permite el acceso a la memoria.
+                </li>
+                <li><strong>5. Escritura de Resultados (Write-back):</strong> 
+                    Después de que se ha ejecutado la operación, los resultados se escriben de nuevo en los registros o en la memoria, dependiendo de la instrucción. Esta etapa finaliza el ciclo de ejecución de la instrucción.
+                </li>
+            </ul>
+        
+            <h3>Proceso Completo del Ciclo de Instrucción</h3>
+            <p>
+                El ciclo de instrucción se repite continuamente mientras el procesador ejecuta las instrucciones de un programa. En cada ciclo, el procesador realiza una de las fases mencionadas anteriormente, lo que le permite procesar y ejecutar las instrucciones de manera secuencial.
+            </p>
+        
+            <h3>Importancia del Ciclo de Instrucción</h3>
+            <p>
+                El ciclo de instrucción es fundamental para el funcionamiento de cualquier procesador. A través de este proceso, el procesador es capaz de realizar operaciones lógicas, aritméticas, de entrada/salida, y de control que permiten ejecutar programas y realizar cálculos.
+            </p>
+            <p>
+                La eficiencia del ciclo de instrucción depende en gran medida de la arquitectura del procesador, la velocidad de la memoria, y la capacidad de paralelizar las etapas del ciclo. En procesadores modernos, estas etapas pueden solaparse parcialmente (pipelining), lo que mejora la eficiencia general.
+            </p>
+        
+            <h3>Conclusión</h3>
+            <p>
+                Comprender las etapas del ciclo de instrucción es clave para entender cómo los procesadores ejecutan programas y realizan cálculos. Cada etapa tiene un papel crucial en asegurar que las instrucciones se ejecuten correctamente y de manera eficiente. Este conocimiento es fundamental para el diseño y la optimización de sistemas computacionales.
+            </p>
+        </div>
+                <center>
+            <img src="img/odpcs1234.gif" style="border-radius: 5px; width: 360px;">
+        </center> 
+    </div>
+</div>
+
+<div data-role="page" id="pag7">
+    <div data-role="header" data-theme="d">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="d">
+        <div class="center">
+            <img src="img/odpcs1.gif" style="border-radius: 5px; width: 360px;">
+            <h2>Evaluación y Pruebas</h2>
+            
+            <div class="form-container">
+                <h2>Cuestionario de Evaluación</h2>
+                <form id="formularioCuestionario">
+                    <!-- Pregunta 1 -->
+                    <div class="question">
+                        <p>1. ¿Cuál es la principal característica de la Máquina Abacus?</p>
+                        <label><input type="radio" name="q1" value="a"> Tiene un único acumulador.</label><br>
+                        <label><input type="radio" name="q1" value="b"> Utiliza múltiples procesadores.</label><br>
+                        <label><input type="radio" name="q1" value="c"> Utiliza una arquitectura de 64 bits.</label>
+                    </div>
+        
+                    <!-- Pregunta 2 -->
+                    <div class="question">
+                        <p>2. ¿Qué diferencia a la Super Abacus de la Máquina Abacus?</p>
+                        <label><input type="radio" name="q2" value="a"> Utiliza registros generales para operaciones.</label><br>
+                        <label><input type="radio" name="q2" value="b"> Utiliza una memoria compartida.</label><br>
+                        <label><input type="radio" name="q2" value="c"> Tiene más de 4 núcleos de procesamiento.</label>
+                    </div>
+        
+                    <!-- Pregunta 3 -->
+                    <div class="question">
+                        <p>3. ¿Qué define la arquitectura de Von Neumann?</p>
+                        <label><input type="radio" name="q3" value="a"> Tiene un bus de datos único.</label><br>
+                        <label><input type="radio" name="q3" value="b"> Usa memoria separada para datos e instrucciones.</label><br>
+                        <label><input type="radio" name="q3" value="c"> No utiliza registros internos.</label>
+                    </div>
+        
+                    <!-- Pregunta 4 -->
+                    <div class="question">
+                        <p>4. ¿Cuál es la función principal de la memoria principal?</p>
+                        <label><input type="radio" name="q4" value="a"> Almacenar temporalmente los datos y programas en ejecución.</label><br>
+                        <label><input type="radio" name="q4" value="b"> Almacenar de manera permanente los programas.</label><br>
+                        <label><input type="radio" name="q4" value="c"> Procesar los cálculos matemáticos de la CPU.</label>
+                    </div>
+        
+                    <!-- Pregunta 5 -->
+                    <div class="question">
+                        <p>5. ¿Cuál es la principal diferencia entre memoria primaria y secundaria?</p>
+                        <label><input type="radio" name="q5" value="a"> La memoria primaria es más rápida que la secundaria.</label><br>
+                        <label><input type="radio" name="q5" value="b"> La memoria primaria es más grande que la secundaria.</label><br>
+                        <label><input type="radio" name="q5" value="c"> La memoria primaria se utiliza solo para almacenamiento externo.</label>
+                    </div>
+        
+                    <!-- Pregunta 6 -->
+                    <div class="question">
+                        <p>6. ¿Qué es un SSD?</p>
+                        <label><input type="radio" name="q6" value="a"> Un tipo de memoria secundaria más rápida que los discos duros.</label><br>
+                        <label><input type="radio" name="q6" value="b"> Un tipo de procesador.</label><br>
+                        <label><input type="radio" name="q6" value="c"> Un tipo de memoria RAM.</label>
+                    </div>
+        
+                    <!-- Pregunta 7 -->
+                    <div class="question">
+                        <p>7. ¿Cuál es el ciclo de instrucción del procesador?</p>
+                        <label><input type="radio" name="q7" value="a"> Búsqueda, decodificación, ejecución y almacenamiento.</label><br>
+                        <label><input type="radio" name="q7" value="b"> Solo búsqueda y ejecución.</label><br>
+                        <label><input type="radio" name="q7" value="c"> Solo decodificación.</label>
+                    </div>
+        
+                    <!-- Pregunta 8 -->
+                    <div class="question">
+                        <p>8. ¿Qué almacena la memoria secundaria?</p>
+                        <label><input type="radio" name="q8" value="a"> Solo instrucciones de ejecución.</label><br>
+                        <label><input type="radio" name="q8" value="b"> Datos de uso permanente como archivos y programas.</label><br>
+                        <label><input type="radio" name="q8" value="c"> Solo datos temporales del sistema.</label>
+                    </div>
+        
+                    <!-- Pregunta 9 -->
+                    <div class="question">
+                        <p>9. ¿Cuál es el propósito de la arquitectura de Von Neumann?</p>
+                        <label><input type="radio" name="q9" value="a"> Unificar las funciones de procesamiento y memoria en un solo sistema.</label><br>
+                        <label><input type="radio" name="q9" value="b"> Separar la CPU y la memoria.</label><br>
+                        <label><input type="radio" name="q9" value="c"> Usar una arquitectura de múltiples núcleos.</label>
+                    </div>
+        
+                    <!-- Pregunta 10 -->
+                    <div class="question">
+                        <p>10. ¿Cuál es la unidad central de procesamiento en una computadora?</p>
+                        <label><input type="radio" name="q10" value="a"> La memoria RAM.</label><br>
+                        <label><input type="radio" name="q10" value="b"> El disco duro.</label><br>
+                        <label><input type="radio" name="q10" value="c"> El procesador o CPU.</label>
+                    </div>
+        
+                    <button type="button" onclick="validarRespuestas()">Enviar respuestas</button>
+                </form>
+        
+                <div id="resultado" class="resultado"></div>
+            </div>
+</div>
+
+
+<div data-role="page" id="pag8">
+    <div data-role="header" data-theme="d">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="d">  
+        <center>
+            <img src="img/odpcs12.gif" style="border-radius: 5px; width: 360px;">
+            <h2>Tendencias Futuras en la Organización de Computadores</h2>  
+        </center> 
+        <p>Conoce las tendencias tecnológicas que están dando forma al futuro de la organización de computadores, como el procesamiento en paralelo y las nuevas formas de memoria. Se exploran conceptos emergentes que podrían ser clave en los próximos años.</p>
+    </div>
+</div>
+
+<div data-role="page" id="pag9">
+    <div data-role="header" data-theme="d">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="d">  
+        <center>
+            <img src="img/" style="border-radius: 5px; width: 360px;">
+            <h2></h2>  
+        </center> 
+        <p>Next</p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
+<script>
+    $(document).ready(function() {
+        // Desvanecimiento suave al mostrar la página
+        $("#inicio").hide().fadeIn(1000);
+
+        // Cambio de color del botón al hacer clic
+        $(".button-custom").on("click", function() {
+            $(this).css("background-color", "#004085");
+        });
+    });
+</script>
+
+</body>
+</html>
